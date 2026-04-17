@@ -16,7 +16,7 @@
 .sponsor-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     gap: 24rem;
 }
 
@@ -40,7 +40,7 @@
 
 .sponsor {  
     color: black;
-    width: calc(50% - 24rem);
+    width: 50%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -52,6 +52,40 @@
         linear-gradient(#f8f3e2,#e6dec6) padding-box,
         var(--gradient-silver) border-box;
     border: 5px solid transparent;
+}
+
+.idaginattlogo {
+  position: absolute;
+  right: -250px;         
+  top: 50%;     
+  transform: translateY(-50%);
+  width: 550px;     
+  rotate: var(--rotation, 0deg);
+}
+
+.idaginattlogo img {
+  width: 120%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .idaginattlogo {
+    display: none;
+  }
+
+  .sponsor-text-container {
+	margin-top: -50rem;
+  }
+
+  .sponsor-text-container h2 {
+	padding-bottom: 5rem;
+  }
+
+  .sponsor-heading {
+	font-size: 36rem;
+	padding-bottom: 20rem;
+  }
 }
 
 @media screen and (max-width: 1024px) {

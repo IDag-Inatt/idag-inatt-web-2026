@@ -130,5 +130,16 @@ menuLinks.forEach(link => {
     });
 });
 
+window.addEventListener('scroll', () => {
+  const section = document.getElementById('sponsors');
+  const sectionMiddle = section.offsetTop + section.offsetHeight / 2;
+  const viewportMiddle = window.scrollY + window.innerHeight / 2;
+  
+  const progress = viewportMiddle - sectionMiddle;
+  
+  const rotation = 300 - progress * 0.1;
+  
+  document.querySelector('.idaginattlogo').style.setProperty('--rotation', rotation + 'deg');
+});
 
 

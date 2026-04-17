@@ -20,6 +20,12 @@
     padding-left: 32rem;
 }
 
+@media (max-width: 768px) {
+	h3{
+		font-size: 36rem;
+	}
+}
+
 @media screen and (min-width: 900px) {
     .schedule-section__columns {
         flex-direction: row;
