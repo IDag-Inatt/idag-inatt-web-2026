@@ -59,6 +59,7 @@
     height: 100%;
     background-color: var(--white);
     transform: translateX(-50%);
+	opacity: 0.5;
 }
 
 .schedule-section__event-name {
@@ -73,16 +74,37 @@
     position: absolute;
     top: calc(0.6 * 1em);
     left: -28rem;
-    width: 8rem;
-    height: 8rem;
+    width: 20rem;
+    height: 20rem;
     background-color: var(--white);
-    border-radius: 9999px;
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Star shape */
+}
+
+.schedule-section__sub-event {
+  padding-left: 56rem;
+}
+
+.schedule-section__sub-event-name {
+  position: relative;
+  font-family: "League Spartan", sans-serif;
+  font-size: 24rem;
+  font-weight: 500;
+}
+
+.schedule-section__sub-event .schedule-section__event-meta {
+  font-size: 14rem;
+}
+
+@media screen and (min-width: 900px) {
+  .schedule-section__sub-event {
+    padding-left: 72rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
     .schedule-section__event-name::before {
-        left: -48rem;
-        width: 16rem;
-        height: 16rem;
+        left: -50rem;
+        width: 20rem;
+        height: 20rem;
     }
 }
